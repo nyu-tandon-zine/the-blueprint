@@ -1,0 +1,66 @@
+/* Zine page styles */
+
+.zine-section {
+	width: 100%;
+	padding: 48px 24px;
+	box-sizing: border-box;
+	flex-grow: 1;
+}
+
+.zine-section h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0 0 48px;
+}
+
+.zine-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 48px;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-items: center;
+}
+
+.zine-page {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.zine-page:hover {
+	transform: scale(1.05);
+}
+
+.page-image {
+	width: 160px;
+	aspect-ratio: 1/1.414;
+	background: rgba(255, 255, 255, 0.05);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	margin-bottom: 12px;
+	transition: all 0.3s ease;
+}
+
+.zine-page:hover .page-image {
+	border-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.page-title {
+	margin: 0 0 4px;
+	font-size: 1rem;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.page-author {
+	margin: 0;
+	font-size: 0.875rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+}
