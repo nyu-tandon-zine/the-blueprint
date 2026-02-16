@@ -1,0 +1,105 @@
+/* Zine page styles - Version 2 (Digital Magazine) */
+
+.magazine-container {
+	width: 100%;
+	padding: 48px 24px;
+	box-sizing: border-box;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.magazine-container h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0 0 48px;
+}
+
+.magazine-viewer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+.magazine-controls {
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	width: 100%;
+}
+
+.page-btn {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+	padding: 12px 24px;
+	font-size: 1rem;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.page-btn:active {
+	transform: scale(0.95);
+}
+
+.magazine-pages {
+	display: flex;
+	gap: 48px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.page-frame {
+	width: 380px;
+	aspect-ratio: 1/1.414;
+	background: rgba(255, 255, 255, 0.02);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-frame img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.page-number {
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+	margin: 0;
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.6);
+	background: rgba(0, 0, 0, 0.4);
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+	.magazine-viewer {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.magazine-pages {
+		flex-direction: column;
+	}
+
+	.page-frame {
+		width: 240px;
+	}
+}

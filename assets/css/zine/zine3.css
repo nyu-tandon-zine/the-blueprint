@@ -1,0 +1,114 @@
+/* Zine page styles - Version 3 (Launch Edition) */
+
+.zine-section {
+	width: 100%;
+	padding: 48px 24px;
+	box-sizing: border-box;
+	position: relative;
+	min-height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.zine-section h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0 0 48px;
+	width: 100%;
+}
+
+.rocket-launch {
+	position: relative;
+	width: 900px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+.zine-page {
+	position: absolute;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	left: var(--left);
+	top: var(--top);
+	transform: translateX(var(--translate-x, 0)) rotate(var(--rotation, 0deg));
+}
+
+/* Customize position and rotation for each page */
+.rocket-logo {
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	transform: translateX(-50%);
+	width: 200px;
+	height: auto;
+	z-index: 10;
+}
+
+.page-1 {
+	--left: 200px;
+	--top: 200px;
+	--rotation: 20deg;
+}
+
+.page-2 {
+	--left: 550px;
+	--top: 200px;
+	--rotation: -20deg;
+}
+
+.page-3 {
+	--left: 80px;
+	--top: 500px;
+	--rotation: 30deg;
+}
+
+.page-4 {
+	--left: 380px;
+	--top: 450px;
+	--rotation: 0deg;
+}
+
+.page-5 {
+	--left: 680px;
+	--top: 500px;
+	--rotation: -30deg;
+}
+
+.zine-page:hover {
+	transform: scale(1.05) rotate(var(--rotation, 0deg));
+}
+
+.page-image {
+	width: 160px;
+	aspect-ratio: 1/1.414;
+	background: rgba(255, 255, 255, 0.05);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	margin-bottom: 12px;
+	transition: all 0.3s ease;
+}
+
+.zine-page:hover .page-image {
+	border-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.page-title {
+	margin: 0 0 4px;
+	font-size: 1rem;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.page-author {
+	margin: 0;
+	font-size: 0.875rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+}
